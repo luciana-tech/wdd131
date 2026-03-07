@@ -1,11 +1,84 @@
-<!DOCTYPE html>     
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD131</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Luciana Oliveira</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Luciana Oliveira - Keyword summary: web development, HTML, CSS, JavaScript, Brazil, language specialist, translation">
+    <meta name="author" content="Luciana Oliveira">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    
+    <!-- JavaScript with defer -->
+    <script src="scripts/getdates.js" defer></script>
 </head>
-<body></body>    
-    <h1>WDD131 - Oliveira</h1>
+<body>
+    <header>
+        <span id="course-title" class="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/luciana-oliveira-1a869325/" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/56?lang=eng&id=p3#p3" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Luciana Oliveira</h1>
+        
+        <div class="cards-container">
+            <!-- About Me Card -->
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-content about-card">
+                    <div class="text-content">
+                        <p>My name is Luciana and I am a seasoned language specialist with over ten years of experience. I collaborated closely with clients and cross-functional teams to understand their goals, ensuring linguistic accuracy and emotional impact across all materials. Translating sacred material is a bridge-building ministry that transforms divine truth into heart-language, allowing Heavenly Father's children to feel, know, and follow Jesus Christ.</p>
+                        
+                        <!-- Brazil section with image floating to the right -->
+                        <div class="brazil-section">
+                            <h3>Brazil</h3>
+                            <div class="brazil-content">
+                                <img src="images/cristo-redentor.webp" alt="Cristo Redentor - Brazil" class="brazil-flag-image" width="140" height="95">
+                                <p>Brazil is a vibrant, continent-sized nation in South America, reigning as the world's fifth-largest country and a premier hotspot for biodiversity, spanning from the dense Amazon rainforest to 7,491 km of coastline. Beyond its traditional agricultural strength, Brazil is forging a new identity based on strategic mineral independence, advanced digital finance, and cutting-edge engineering.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile image on the right side -->
+                    <div class="image-content profile-image">
+                        <img src="images/profile.webp" alt="Luciana Oliveira - Language Specialist" width="200" height="218">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Web Dev Resources Card -->
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-content">
+                    <div class="text-content">
+                        <ul class="resources-list">
+                            <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+                            <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                            <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                            <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                            <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                            <li><a href="https://picsum.photos/" target="_blank">Lorem Picsum</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Luciana Oliveira | Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
