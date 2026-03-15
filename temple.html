@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Album</title>
+    <meta name="description" content="Temple Album showcasing LDS temples in Brazil">
+    <meta name="author" content="Luciana Oliveira">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS files -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" aria-label="Menu">☰</button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Home</h2>
+        <div class="temple-grid">
+            <figure>
+                <img src="/images/belem_brazil_temple_exterior.webp" alt="Belem Brazil Temple" width="300" height="200" loading="lazy">
+                <figcaption>Belém Brazil Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="/images/campinas_brazil_temple_lds.webp" alt="Campinas Brazil Temple" width="300" height="200" loading="lazy">
+                <figcaption>Campinas Brazil Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="/images/curitiba_brazil_temple.webp" alt="Curitiba Brazil Temple"  width="300" height="200" loading="lazy">
+                <figcaption>Curitiba Brazil Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="/images/manaus_brazil_temple_lds.webp" alt="Manaus Brazil Temple" width="300" height="200" loading="lazy">
+                <figcaption>Manaus Brazil Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="/images/porto_alegre_brazil_temple_lds.webp" alt="Porto Alegre Brazil Temple" width="300" height="200" loading="lazy">
+                <figcaption>Porto Alegre Brazil Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="/images/recife_brazil_temple_lds.webp" alt="Recife Brazil Temple" width="300" height="200" loading="lazy">
+                <figcaption>Recife Brazil Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="/images/rio_de_janeiro_brazil_temple.webp" alt="Rio de Janeiro Brazil Temple" width="300" height="200" loading="lazy">
+                <figcaption>Rio de Janeiro Brazil Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="/images/sao_paulo_brazil_temple_lds.webp" alt="Sao Paulo Brazil Temple" width="300" height="200" loading="lazy">
+                <figcaption>São Paulo Brazil Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="/images/temple_natal_brazil_temple.webp" alt="Natal Brazil Temple" width="300" height="200" loading="lazy">
+                <figcaption>Natal Brazil Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Luciana Oliveira | Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
