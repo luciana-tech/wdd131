@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Brazil | The Heart of South America</title>
+  <meta name="description" content="Discover Brazil: vibrant culture, stunning landscapes, and the rhythm of samba.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brazil-green: #009440;
+      --brazil-gold: #FFD700;
+      --brazil-dark-green: #006633;
+      --neutral-dark: #1e2a2e;
+      --neutral-light: #f9faf7;
+      --white: #ffffff;
+      --shadow-sm: 0 8px 20px rgba(0,0,0,0.08);
+      --shadow-md: 0 12px 28px rgba(0,0,0,0.12);
+      --border-radius-card: 28px;
+      --border-radius-element: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #fef9e6 0%, #fff8e7 100%);
+      color: var(--neutral-dark);
+      line-height: 1.45;
+      padding: 2rem 1.5rem;
+    }
+
+    .country-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--border-radius-card);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .hero picture, .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .content-grid {
+      padding: 2rem 2.2rem;
+    }
+
+    .info-sections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      margin: 1.5rem 0 0.8rem;
+    }
+    
+    .data-card, .weather-card {
+      flex: 1;
+      min-width: 240px;
+      background: var(--neutral-light);
+      border-radius: var(--border-radius-element);
+      padding: 1.6rem 1.8rem;
+      border: 1px solid rgba(0,148,64,0.2);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .data-card h2, .weather-card h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      border-left: 6px solid var(--brazil-green);
+      padding-left: 1rem;
+      margin-bottom: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    /* DESKTOP VIEW: emoticon after heading (assignment requirement) */
+    .weather-card h2::after {
+      content: "⛅";
+      font-size: 2rem;
+      margin-left: 0.5rem;
+      display: inline-block;
+    }
+
+    .data-list, .weather-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    
+    .data-item, .weather-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      border-bottom: 1px dashed #cddfc7;
+      padding-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+    
+    .data-label, .weather-label {
+      font-weight: 700;
+      color: var(--brazil-dark-green);
+      background: #eef5ea;
+      padding: 0.2rem 0.7rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+    }
+    
+    .data-value, .weather-value {
+      font-weight: 500;
+      color: #2c4b3e;
+    }
+
+    .windchill-row {
+      background: #FFF1C1;
+      border-radius: 60px;
+      padding: 0.6rem 1rem;
+      margin-top: 0.3rem;
+      border-left: 4px solid var(--brazil-gold);
+    }
+
+    .footer {
+      background: var(--brazil-dark-green);
+      color: #fef9e6;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      border-top: 4px solid var(--brazil-gold);
+    }
+    
+    .footer p {
+      margin: 0.3rem 0;
+    }
+
+    /* MOBILE VIEW (≤ 780px) */
+    @media (max-width: 780px) {
+      body {
+        padding: 1rem;
+      }
+      .content-grid {
+        padding: 1.5rem;
+      }
+      .info-sections {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      /* Hide the emoticon pseudo-element on mobile */
+      .weather-card h2::after {
+        display: none;
+      }
+      /* Show SVG icon container on mobile */
+      .mobile-weather-svg {
+        display: inline-flex;
+        vertical-align: middle;
+        margin-left: 8px;
+      }
+      .mobile-weather-svg img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    /* Desktop default: hide the mobile SVG container */
+    .mobile-weather-svg {
+      display: none;
+    }
+
+    .large-image-caption {
+      font-size: 0.75rem;
+      text-align: center;
+      background: #f0f2e9;
+      padding: 0.3rem;
+      color: #2c5a3b;
+    }
+
+    .place-title {
+      background: linear-gradient(135deg, var(--brazil-green), var(--brazil-dark-green));
+      color: white;
+      padding: 1.4rem 2rem;
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 800;
+      text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    }
+    
+    .place-title span {
+      background: var(--brazil-gold);
+      color: var(--brazil-dark-green);
+      padding: 0 0.6rem;
+      border-radius: 60px;
+      font-size: 1.6rem;
+      display: inline-block;
+      margin-left: 12px;
+    }
+  </style>
+</head>
+<body>
+<div class="country-container">
+  <div class="place-title">
+    🇧🇷 Brasil <span>Verde e Amarelo</span>
+  </div>
+
+  <!-- HERO: your local WebP image -->
+  <div class="hero">
+    <picture>
+      <source srcset="images/rio_de_janeiro.webp" media="(max-width: 640px)">
+      <source srcset="images/rio_de_janeiro.webp" media="(max-width: 1024px)">
+      <source srcset="images/rio_de_janeiro.webp">
+      <img src="images/rio_de_janeiro.webp" 
+           alt="Rio de Janeiro with Sugarloaf Mountain and Christ the Redeemer" 
+           loading="eager" 
+           width="1032" 
+           height="774">
+    </picture>
+    <div class="large-image-caption">✨ Rio de Janeiro – Cidade Maravilhosa ✨</div>
+  </div>
+
+  <div class="content-grid">
+    <div class="info-sections">
+      <!-- Data section -->
+      <div class="data-card">
+        <h2>📊 Brazil at a glance</h2>
+        <div class="data-list">
+          <div class="data-item"><span class="data-label">Capital</span><span class="data-value">Brasília</span></div>
+          <div class="data-item"><span class="data-label">Population</span><span class="data-value">~216 million (2025)</span></div>
+          <div class="data-item"><span class="data-label">Area</span><span class="data-value">8.516 million km²</span></div>
+          <div class="data-item"><span class="data-label">Language</span><span class="data-value">Portuguese</span></div>
+          <div class="data-item"><span class="data-label">Currency</span><span class="data-value">Brazilian Real (BRL)</span></div>
+          <div class="data-item"><span class="data-label">Famous for</span><span class="data-value">Samba, Amazon, Carnival</span></div>
+        </div>
+      </div>
+
+      <!-- Weather section -->
+      <div class="weather-card">
+        <h2>
+          ☀️ Weather today 
+          <!-- Mobile SVG icon (visible only on mobile) -->
+          <span class="mobile-weather-svg">
+            <img src="images/weather-svgrepo-com.svg" alt="weather icon" width="28" height="28">
+          </span>
+        </h2>
+        <div class="weather-list">
+          <div class="weather-row"><span class="weather-label">Condition</span><span class="weather-value">Partly sunny with tropical breeze</span></div>
+          <div class="weather-row"><span class="weather-label">Temperature</span><span class="weather-value" id="temp-value">26 °C</span></div>
+          <div class="weather-row"><span class="weather-label">Wind Speed</span><span class="weather-value" id="wind-value">12 km/h</span></div>
+          <div class="weather-row"><span class="weather-label">Humidity</span><span class="weather-value">68%</span></div>
+          <div class="weather-row"><span class="weather-label">UV Index</span><span class="weather-value">High (7)</span></div>
+          <div class="weather-row windchill-row"><span class="weather-label">🌬️ Wind Chill Factor</span><span class="weather-value" id="windchill-display">--</span></div>
+        </div>
+        <p style="font-size: 0.7rem; margin-top: 1rem; text-align: right; opacity: 0.7;">📍 Rio de Janeiro region</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© <span id="current-year"></span> • Explore Brazil • Brazilian Tourism Board</p>
+    <p>📍 Rio de Janeiro • Brasília • São Paulo</p>
+    <p>📅 Last modified: <span id="last-modified"></span></p>
+  </div>
+</div>
+
+<script defer>
+  // Footer: current year
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+  
+  // Last modified date
+  const lastModified = new Date(document.lastModified);
+  document.getElementById('last-modified').textContent = lastModified.toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+
+  // Wind chill functions
+  function getNumericTemperature() {
+    const tempElement = document.getElementById('temp-value');
+    const match = tempElement.textContent.match(/([\d\.]+)/);
+    return match ? parseFloat(match[0]) : 26;
+  }
+  
+  function getNumericWindSpeed() {
+    const windElement = document.getElementById('wind-value');
+    const match = windElement.textContent.match(/([\d\.]+)/);
+    return match ? parseFloat(match[0]) : 12;
+  }
+
+  function calculateWindChill(tempC, windKmh) {
+    const vPow = Math.pow(windKmh, 0.16);
+    return Math.round((13.12 + 0.6215 * tempC - 11.37 * vPow + 0.3965 * tempC * vPow) * 10) / 10;
+  }
+
+  function isWindChillValid(tempC, windKmh) {
+    return tempC <= 10 && windKmh > 4.8;
+  }
+
+  function updateWindChill() {
+    const temp = getNumericTemperature();
+    const wind = getNumericWindSpeed();
+    const windChillSpan = document.getElementById('windchill-display');
+    
+    if (isWindChillValid(temp, wind)) {
+      windChillSpan.textContent = `${calculateWindChill(temp, wind)} °C`;
+    } else {
+      windChillSpan.textContent = "N/A";
+    }
+  }
+
+  updateWindChill();
+</script>
+</body>
+</html>

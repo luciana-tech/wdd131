@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brazil | Country Page</title>
+  <meta name="description" content="Discover Brazil: vibrant culture, stunning landscapes, and the rhythm of samba.">
+  <link rel="stylesheet" href="styles/place.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="country-container">
+    <!-- Header with green strip and yellow border -->
+    <header class="page-header">
+      <h1>Brazil</h1>
+      <div class="yellow-border"></div>
+    </header>
+
+    <!-- Hero section with individually positioned boxes -->
+    <div class="hero-section">
+      <picture class="hero-image">
+        <source srcset="images/rio_de_janeiro.webp" media="(max-width: 640px)">
+        <source srcset="images/rio_de_janeiro.webp" media="(max-width: 1024px)">
+        <source srcset="images/rio_de_janeiro.webp">
+        <img src="images/rio_de_janeiro.webp" alt="Rio de Janeiro with Sugarloaf Mountain" loading="eager">
+      </picture>
+      
+      <div class="overlay-content">
+        <!-- Data Section - positioned top-left -->
+        <div class="data-card">
+          <h2>Data</h2>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">Area:</span>
+              <span class="info-value">8,516,000 sq km</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Population:</span>
+              <span class="info-value">216,000,000</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Capital:</span>
+              <span class="info-value">Brasília</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Languages:</span>
+              <span class="info-value">Portuguese</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Currency:</span>
+              <span class="info-value">Brazilian Real (BRL)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Time Zone:</span>
+              <span class="info-value">UTC-3 to UTC-5</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Calling Code:</span>
+              <span class="info-value">+55</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Internet TLD:</span>
+              <span class="info-value">.br</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather Section - positioned bottom-right -->
+        <div class="weather-card">
+          <h2>
+            Weather
+            <!-- Mobile SVG icon (visible on mobile only) -->
+            <span class="mobile-weather-icon">
+              <img src="images/weather-svgrepo-com.svg" alt="weather icon" width="28" height="28">
+            </span>
+          </h2>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">Temperature:</span>
+              <span class="info-value" id="temperature">26 °C</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Conditions:</span>
+              <span class="info-value">Partly Sunny</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Wind:</span>
+              <span class="info-value" id="wind-speed">12 km/h</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Wind Chill:</span>
+              <span class="info-value" id="wind-chill">--</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <p>© <span id="current-year"></span> <a href="#">Luciana Oliveira</a> | <a href="#">Brazil</a></p>
+      <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+  </div>
+
+  <script src="scripts/place.js" defer></script>
+</body>
+</html>

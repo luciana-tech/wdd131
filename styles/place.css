@@ -1,0 +1,395 @@
+/* CSS Variables - Brazil Colors */
+:root {
+  --brazil-green: #009440;
+  --brazil-gold: #FFD700;
+  --brazil-dark-green: #006633;
+  --overlay-bg: rgba(0, 0, 0, 0.25);
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-text: #1e2a2e;
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.25);
+  --border-radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.country-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Header with green strip and yellow border */
+.page-header {
+  background: var(--brazil-green);
+  padding: 2rem 2rem 1.5rem 2rem;
+  position: relative;
+  text-align: center;
+}
+
+
+.page-header h1 {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  text-align: center;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #ffffff, var(--brazil-gold));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  display: inline-block;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.yellow-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: var(--brazil-gold);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section with overlay */
+.hero-section {
+  position: relative;
+  min-height: 600px;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay Content */
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-bg);
+  padding: 2rem;
+}
+
+/* Data box - top left (matching wireframe) */
+.data-card {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(3px);
+  border-radius: var(--border-radius);
+  padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+  width: 280px;
+  max-width: 30%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+  overflow: visible;
+}
+
+/* Weather box - bottom right (matching wireframe) */
+.weather-card {
+  position: absolute;
+  bottom: 2rem; 
+  right: 2rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(3px);
+  border-radius: var(--border-radius);
+  padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+  width: 280px;
+  max-width: 30%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+  overflow: visible;
+}
+
+/* Hover effect for both boxes */
+.data-card:hover,
+.weather-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Small green rectangle for headings */
+.data-card h2,
+.weather-card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  background: var(--brazil-green);
+  display: inline-block;
+  padding: 0.4rem 1.2rem 0.4rem 1.2rem;
+  margin: -1.8rem 0 1rem -1.5rem;
+  border-radius: 0 30px 30px 0;
+  position: relative;
+  width: auto;
+  min-width: 140px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* Desktop: Show pseudo-element emoticon after heading */
+.weather-card h2::after {
+  content: "⛅";
+  font-size: 1.2rem;
+  display: inline-block;
+  color: var(--brazil-gold);
+  background: rgba(0, 0, 0, 0.12);
+  padding: 0.15rem 0.4rem;
+  border-radius: 25px;
+  margin-left: 0.4rem;
+}
+
+/* Mobile: Hide pseudo-element, show SVG */
+.mobile-weather-icon {
+  display: none;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(0, 148, 64, 0.2);
+  font-size: 0.9rem;
+}
+
+.info-label {
+  font-weight: 700;
+  color: var(--brazil-dark-green);
+  background: rgba(0, 148, 64, 0.08);
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+.info-value {
+  font-weight: 500;
+  color: #2c4b3e;
+  font-size: 0.9rem;
+}
+
+.page-footer {
+  background: var(--brazil-dark-green);
+  color: white;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.95rem;
+  border-top: 3px solid var(--brazil-gold);
+  position: relative;
+  z-index: 10;
+}
+
+.page-footer a {
+  color: var(--brazil-gold);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.page-footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.page-footer p {
+  margin: 0.5rem 0;
+}
+
+/* Mobile View */
+@media (max-width: 780px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .yellow-border {
+    height: 8px;
+  }
+  
+  .overlay-content {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .hero-section {
+    min-height: auto;
+  }
+  
+  .hero-image {
+    min-height: auto;
+  }
+  
+  /* Mobile: remove absolute positioning, stack boxes vertically */
+  .data-card,
+  .weather-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 1rem 1.2rem 1rem 1.2rem;
+  }
+  
+  /* Adjust green rectangle for mobile */
+  .data-card h2,
+  .weather-card h2 {
+    font-size: 1.2rem;
+    padding: 0.35rem 1rem 0.35rem 1rem;
+    margin: -1.5rem 0 0.8rem -1.2rem;
+    min-width: 120px;
+  }
+  
+  /* Mobile: Hide pseudo-element emoticon */
+  .weather-card h2::after {
+    display: none;
+  }
+  
+  /* Mobile: Show SVG icon */
+  .mobile-weather-icon {
+    display: inline-flex;
+  }
+  
+  .mobile-weather-icon img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .data-card h2,
+  .weather-card h2 {
+    justify-content: space-between;
+  }
+  
+  .info-item {
+    font-size: 0.85rem;
+    padding: 0.35rem 0;
+  }
+  
+  .info-label {
+    font-size: 0.7rem;
+  }
+  
+  .info-value {
+    font-size: 0.85rem;
+  }
+  
+  .page-footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 781px) and (max-width: 1024px) {
+  .data-card,
+  .weather-card {
+    width: 260px;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+  }
+  
+  .data-card {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+  
+  .weather-card {
+    bottom: 1.5rem;  /* Bottom on tablet */
+    right: 1.5rem;
+  }
+  
+  .data-card h2,
+  .weather-card h2 {
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    margin: -1.6rem 0 0.8rem -1.2rem;
+    min-width: 130px;
+  }
+  
+  .info-item {
+    font-size: 0.85rem;
+    padding: 0.4rem 0;
+  }
+  
+  .page-footer {
+    padding: 1.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1025px) {
+  .data-card,
+  .weather-card {
+    width: 300px;
+  }
+  
+  .data-card {
+    top: 2.5rem;
+    left: 2.5rem;
+  }
+  
+  .weather-card {
+    bottom: 2.5rem; 
+    right: 2.5rem;
+  }
+}
