@@ -1,0 +1,310 @@
+/* The Right City - Main Stylesheet */
+/* Colors: #524F81 (primary), #392A48 (secondary), #E6E6FA (background) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #E6E6FA;
+    font-family: 'Open Sans', sans-serif;
+    color: #1E1A2F;
+    line-height: 1.5;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 2rem 1.8rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, .nav-links a, .btn, .logo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #392A48;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #392A48;
+    border-left: 6px solid #524F81;
+    padding-left: 1rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #524F81;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.primary-color {
+    color: #524F81;
+}
+
+.secondary-color {
+    color: #392A48;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 3px solid #524F81;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.logo-area {
+    background: #524F81;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-area span {
+    font-size: 2rem;
+}
+
+.site-name-desc {
+    flex: 1;
+}
+
+.site-name-desc p {
+    font-weight: 500;
+    color: #2c2a4a;
+}
+
+/* Cards */
+.card {
+    background: #F9F9FF;
+    border-radius: 1.5rem;
+    padding: 1.4rem 1.8rem;
+    margin: 1.2rem 0;
+    border: 1px solid #ddd9f0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+/* Color Grid */
+.color-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.color-chip {
+    flex: 1;
+    min-width: 160px;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.chip-primary {
+    background-color: #524F81;
+    color: white;
+}
+
+.chip-secondary {
+    background-color: #392A48;
+    color: white;
+}
+
+.chip-bg {
+    background-color: #E6E6FA;
+    color: #1E1A2F;
+    border: 1px solid #ccc2e0;
+}
+
+/* Font Demo */
+.font-demo {
+    background: #f4f2fc;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+}
+
+.font-mont {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.font-opensans {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+/* Wireframes */
+.wireframe-section {
+    margin: 2rem 0 1rem;
+}
+
+.wireframe-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.wireframe-card {
+    flex: 1;
+    min-width: 280px;
+    background: #fefefe;
+    border-radius: 1.5rem;
+    border: 1px solid #e0daf5;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.wireframe-header {
+    background: #392A48;
+    color: white;
+    padding: 0.8rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.wireframe-content {
+    padding: 1rem;
+    background: #fff;
+}
+
+.mockup {
+    background: #FCF9FF;
+    border: 1px dashed #524F81;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+.mockup-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.mock-card {
+    background: #E6E6FA;
+    border-radius: 12px;
+    padding: 0.8rem;
+    flex: 1;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #392A48;
+}
+
+.mock-hero {
+    background: #E6E6FA;
+    padding: 1rem;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.btn-mock {
+    background: #524F81;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 6px 16px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer-mock {
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    padding-top: 0.8rem;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+/* Scenarios */
+.scenario-badge {
+    background: #E6E6FA;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    margin: 0.8rem 0;
+    border-left: 5px solid #524F81;
+    font-style: italic;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    color: #524F81;
+    font-size: 0.8rem;
+    border-top: 1px solid #ddd9f0;
+}
+
+/* Lists */
+.list-styling {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.list-styling li {
+    margin-bottom: 0.3rem;
+}
+
+code {
+    background: #f4f2fc;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    font-family: monospace;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+    .container {
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+}
