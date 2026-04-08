@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>The Right City | Site Plan & Wireframes</title>
+    <meta name="description" content="Site planning document for The Right City - a platform revealing Brazilian cities with best quality of life and cost-benefit, based on official data.">
+    <!-- Google Fonts: two modern, readable fonts (Montserrat for headings, Open Sans for body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #E6E6FA;   /* soft lavender background for entire site plan */
+            font-family: 'Open Sans', sans-serif;
+            color: #1E1A2F;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        /* main container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 2rem 1.8rem;
+        }
+
+        /* color schema accent: primary #524F81, secondary #392A48 */
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #392A48;     /* deep plum for headings */
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-left: 6px solid #524F81;
+            padding-left: 1rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1rem 0 0.5rem 0;
+            color: #524F81;
+        }
+
+        .site-header {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 3px solid #524F81;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .logo-area {
+            background: #524F81;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            padding: 0.5rem 1rem;
+            border-radius: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-area span {
+            font-size: 2rem;
+        }
+
+        .site-name-desc {
+            flex: 1;
+        }
+
+        .site-name-desc p {
+            font-weight: 500;
+            color: #2c2a4a;
+        }
+
+        .card {
+            background: #F9F9FF;
+            border-radius: 1.5rem;
+            padding: 1.4rem 1.8rem;
+            margin: 1.2rem 0;
+            border: 1px solid #ddd9f0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .color-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .color-chip {
+            flex: 1;
+            min-width: 160px;
+            border-radius: 1rem;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .chip-primary {
+            background-color: #524F81;
+            color: white;
+        }
+        .chip-secondary {
+            background-color: #392A48;
+            color: white;
+        }
+        .chip-bg {
+            background-color: #E6E6FA;
+            color: #1E1A2F;
+            border: 1px solid #ccc2e0;
+        }
+
+        .font-demo {
+            background: #f4f2fc;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-top: 0.5rem;
+        }
+        .font-mont {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .font-opensans {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+        }
+
+        /* Wireframe styles (mobile & desktop) */
+        .wireframe-section {
+            margin: 2rem 0 1rem;
+        }
+        .wireframe-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            margin: 1.5rem 0;
+        }
+        .wireframe-card {
+            flex: 1;
+            min-width: 280px;
+            background: #fefefe;
+            border-radius: 1.5rem;
+            border: 1px solid #e0daf5;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+        .wireframe-header {
+            background: #392A48;
+            color: white;
+            padding: 0.8rem;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+        .wireframe-content {
+            padding: 1rem;
+            background: #fff;
+        }
+        .mockup {
+            background: #FCF9FF;
+            border: 1px dashed #524F81;
+            border-radius: 1rem;
+            padding: 1rem;
+            font-size: 0.8rem;
+        }
+        .mockup-bar {
+            background: #524F81;
+            height: 6px;
+            width: 40px;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+        .mockup-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 12px;
+        }
+        .mock-card {
+            background: #E6E6FA;
+            border-radius: 12px;
+            padding: 0.8rem;
+            flex: 1;
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #392A48;
+        }
+        .mock-hero {
+            background: #E6E6FA;
+            padding: 1rem;
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .btn-mock {
+            background: #524F81;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            padding: 6px 16px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .footer-mock {
+            margin-top: 1rem;
+            border-top: 1px solid #ddd;
+            padding-top: 0.8rem;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border-color: #ddd9f0;
+        }
+        .scenario-badge {
+            background: #E6E6FA;
+            padding: 0.8rem;
+            border-radius: 1rem;
+            margin: 0.8rem 0;
+            border-left: 5px solid #524F81;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            color: #524F81;
+            font-size: 0.8rem;
+            border-top: 1px solid #ddd9f0;
+        }
+        @media (max-width: 760px) {
+            .container {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+        .tagline {
+            color: #524F81;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .list-styling {
+            margin-left: 1.4rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Site Name + Logo -->
+    <div class="site-header">
+        <div class="logo-area">
+            <span>🏙️</span> The Right City
+        </div>
+        <div class="site-name-desc">
+            <p><strong>Domain concept:</strong> therightcity.com.br — represents a data-driven platform to find Brazilian cities with premium quality of life and unbeatable cost-benefit. The name emphasizes precision and personalized discovery: the right city for your lifestyle and budget.</p>
+        </div>
+    </div>
+
+    <!-- Site Purpose -->
+    <h2>📌 Site Purpose</h2>
+    <div class="card">
+        <p><strong>The Right City</strong> is an intelligent real-estate and urban quality index platform aimed at people willing to find the right city for their lifestyle and budget. The website aggregates and cross-references official data (health, education, safety, infrastructure) with real estate pricing trends. It delivers clear rankings, city profiles, and personalized email alerts — helping users identify cities where high quality of life still fits their budget, before speculation drives prices up. Services include: <strong>interactive ranking, cost-benefit calculator, city deep-dives, and a signup form</strong> to receive dream city information directly via email.</p>
+    </div>
+
+    <!-- Scenarios (at least two) -->
+    <h2>🎯 Scenarios (Target Audience Questions)</h2>
+    <div class="scenario-badge">
+        💬 <strong>“What is the city with the best quality of life in Brazil?”</strong> — The visitor wants a clear ranking based on education, healthcare, safety, and environmental indicators to decide where to relocate with family.
+    </div>
+    <div class="scenario-badge">
+        💬 <strong>“What is the city with the best cost-benefit in Brazil?”</strong> — A remote worker or young professional seeks affordable cities where salary purchasing power goes further, without sacrificing urban services and leisure.
+    </div>
+    <div class="scenario-badge">
+        💬 <strong>Bonus scenario (implied):</strong> “How can I get personalized city recommendations delivered to my email?” — leads to the signup/login form, converting visitors into subscribers.
+    </div>
+
+    <!-- Color Schema -->
+    <h2>🎨 Color Schema</h2>
+    <div class="color-grid">
+        <div class="color-chip chip-primary">#524F81<br>Primary accent</div>
+        <div class="color-chip chip-secondary">#392A48<br>Secondary / Headings & footer</div>
+        <div class="color-chip chip-bg">#E6E6FA<br>Background / soft lavender</div>
+    </div>
+    <p><strong>Usage:</strong><br>
+    → <strong style="color:#524F81;">#524F81 (Muted Indigo)</strong>: primary buttons, interactive elements, borders, logo background, links hover, ranking highlights.<br>
+    → <strong style="color:#392A48;">#392A48 (Deep Plum)</strong>: main headings, navigation background (optional), footer background, important UI text, secondary cards.<br>
+    → <strong style="color:#E6E6FA;">#E6E6FA (Lavender Blush)</strong>: main body background (applied globally), card backgrounds, hero section accents, wireframe mockup backgrounds.</p>
+
+    <!-- Typography -->
+    <h2>✍️ Typography</h2>
+    <div class="card">
+        <div class="font-demo">
+            <div class="font-mont">Montserrat (Headings & Navigation)</div>
+            <div class="font-opensans" style="margin-top: 0.8rem;">Open Sans (Body text, paragraphs, buttons & forms)</div>
+            <hr style="margin:0.8rem 0">
+            <p><strong>Applied to:</strong> All headings (h1-h6) use Montserrat 600/800. Body copy, ranking descriptions, forms, and footer text use Open Sans (400, 600). Buttons: Montserrat semibold.</p>
+        </div>
+    </div>
+
+    <!-- WIREFRAMES SECTION: Home page (mobile & desktop) -->
+    <h2>📱💻 Wireframes — Home Page (The Right City)</h2>
+    <div class="wireframe-section">
+        <div class="wireframe-row">
+            <!-- Mobile wireframe (representative) -->
+            <div class="wireframe-card">
+                <div class="wireframe-header">📱 Mobile View (≤ 640px)</div>
+                <div class="wireframe-content">
+                    <div class="mockup">
+                        <div class="flex-between"><span style="font-weight:800;">🏙️ The Right City</span><span>☰</span></div>
+                        <div class="mock-hero" style="margin-top: 10px;">
+                            <div style="font-weight:bold;">REAL ESTATE INTELLIGENCE</div>
+                            <div style="font-size:0.75rem;">Find out where you can live well without breaking the bank</div>
+                            <div class="flex-between" style="margin-top: 8px; gap:8px;">
+                                <div class="btn-mock" style="background:#524F81;">Explore rankings</div>
+                                <div class="btn-mock" style="background:#392A48;">How we calculate it</div>
+                            </div>
+                        </div>
+                        <div class="mockup-grid">
+                            <div class="mock-card">Education 87</div>
+                            <div class="mock-card">Heath 82</div>
+                            <div class="mock-card">Safety 74</div>
+                        </div>
+                        <div class="mockup-grid">
+                            <div class="mock-card">Infrastructure</div>
+                            <div class="mock-card">Cost x Quality</div>
+                        </div>
+                        <div class="footer-mock">📍 Top city: Curitiba • Joinville • São José dos Campos</div>
+                    </div>
+                    <p style="font-size:0.7rem; margin-top: 0.5rem; text-align:center;">Stacked layout, collapsible menu, prominent CTA, key indicators as cards.</p>
+                </div>
+            </div>
+
+            <!-- Desktop Wireframe (wide) -->
+            <div class="wireframe-card">
+                <div class="wireframe-header">🖥️ Desktop View (≥ 1024px)</div>
+                <div class="wireframe-content">
+                    <div class="mockup">
+                        <div class="flex-between" style="border-bottom: 1px solid #ddd; padding-bottom: 8px; margin-bottom: 12px;">
+                            <div style="display: flex; gap: 20px;">
+                                <span style="font-weight:800;">🏙️ The Right City</span>
+                                <span>Ranking</span>
+                                <span>Cities</span>
+                                <span>Methodology</span>
+                            </div>
+                            <div><span>Login / Sign up</span></div>
+                        </div>
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <div style="flex:2;">
+                                <div class="mock-hero" style="background:#E6E6FA; text-align:left;">
+                                    <h3 style="margin:0 0 4px 0;">Find out where you can live well <strong>without breaking the bank</strong></h3>
+                                    <p style="font-size:0.75rem;">We cross-reference official health, education, and safety data with actual real estate market prices.</p>
+                                    <div style="display: flex; gap: 12px; margin-top: 12px;">
+                                        <div class="btn-mock">📊 Explore rankings</div>
+                                        <div class="btn-mock" style="background:#392A48;">📈 How we calculate it</div>
+                                    </div>
+                                </div>
+                                <div class="mockup-grid" style="margin-top: 12px;">
+                                    <div class="mock-card">📚 Education: IDEB score + infrastructure</div>
+                                    <div class="mock-card">🏥 Health: Hospital beds per capita</div>
+                                    <div class="mock-card">🚔 Safety: official data</div>
+                                    <div class="mock-card">💰 Average housing cost</div>
+                                </div>
+                            </div>
+                            <div style="flex:1; background:#f4f0fe; border-radius: 20px; padding: 12px;">
+                                <div style="font-weight:bold;">🔍 Top cities 2025</div>
+                                <div>1. Curitiba (PR) 🌟</div>
+                                <div>2. Florianópolis</div>
+                                <div>3. Campinas</div>
+                                <div>4. São José dos Pinhais</div>
+                                <div class="btn-mock" style="display:inline-block; margin-top: 8px;">View complete ranking →</div>
+                            </div>
+                        </div>
+                        <div class="footer-mock">© 2026 | The Right City | Site Plan Project</div>
+                    </div>
+                    <p style="font-size:0.7rem; margin-top: 8px; text-align:center;">Horizontal navigation, multi-column layout with hero, featured ranking panel, and data cards.</p>
+                </div>
+            </div>
+        </div>
+        <p style="font-size:0.8rem; background:#F1EFFB; padding: 8px 12px; border-radius: 24px;">🔍 Additional wireframe details: Home includes dynamic ranking preview, call-to-action for signup, and visual representation of data indicators (education, health, infra).</p>
+    </div>
+
+    <!-- Additional Pages Brief: Ranking + Signup/Login (HTML form description) -->
+    <h2>📄 Page Structure Overview</h2>
+    <div class="card">
+        <h3>🏆 Ranking Page</h3>
+        <p>Full sortable table of Brazilian cities ranked by “Quality of Life Index” and “Cost-Benefit Score”. Filters: region, population size, priorities (education/health/safety). Each city row displays a summary of indicators and a "details" button.</p>
+        
+        <h3>📋 Signup / Login Form (Dream City Delivery)</h3>
+        <p>A functional HTML form that asks for user name, email, password, and preferences (dream region, budget range, priority: quality vs cost-benefit). After login/signup, the system would deliver personalized city information to their email. Form includes: email, password, confirm password (signup), or login toggle. The interface will have a submit button.</p>
+        <div class="mockup" style="margin-top: 12px; max-width: 400px;">
+            <div style="font-weight:bold; margin-bottom: 8px;">🔐 Signup Preview</div>
+            <div>First Name: [______________]</div>
+            <div>Email: [______________]</div>
+            <div>Password: [______________]</div>
+            <div><label><input type="checkbox"> I want to receive suggestions of cities with better cost-benefit</label></div>
+            <div class="btn-mock" style="background:#524F81; width:fit-content; margin-top: 8px;">Signup and receive analysis</div>
+            <div style="font-size:0.7rem; margin-top: 8px;">Already have an account? <strong>Login</strong> | Reset Password</div>
+        </div>
+        <p><em>Note: The signup page includes a call-to-action aligned with the scenario “deliver dream city information to my email.”</em></p>
+    </div>
