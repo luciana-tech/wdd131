@@ -62,6 +62,49 @@ h3 {
     color: #392A48;
 }
 
+/* Utility classes - replaces inline styles */
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.flex-gap-20 {
+    gap: 20px;
+}
+
+.flex-gap-12 {
+    gap: 12px;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.bg-mock-sidebar {
+    background: #f4f0fe;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mock-sidebar-title {
+    font-weight: bold;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
 /* Header */
 .site-header {
     display: flex;
@@ -162,6 +205,11 @@ h3 {
     font-size: 1rem;
 }
 
+hr {
+    margin: 0.8rem 0;
+    border-color: #ddd9f0;
+}
+
 /* Wireframes */
 .wireframe-section {
     margin: 2rem 0 1rem;
@@ -251,6 +299,17 @@ h3 {
     cursor: pointer;
 }
 
+.btn-mock-secondary {
+    background: #392A48;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 6px 16px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 .footer-mock {
     margin-top: 1rem;
     border-top: 1px solid #ddd;
@@ -267,33 +326,6 @@ h3 {
     margin: 0.8rem 0;
     border-left: 5px solid #524F81;
     font-style: italic;
-}
-
-/* Footer */
-.site-footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    color: #524F81;
-    font-size: 0.8rem;
-    border-top: 1px solid #ddd9f0;
-}
-
-/* Lists */
-.list-styling {
-    margin-left: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-.list-styling li {
-    margin-bottom: 0.3rem;
-}
-
-code {
-    background: #f4f2fc;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.3rem;
-    font-family: monospace;
 }
 
 /* Responsive */
