@@ -1,0 +1,263 @@
+/* The Right City - Product Review Form Styles */
+/* Color Scheme: #524F81 (primary), #392A48 (secondary), #E6E6FA (background) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #E6E6FA 0%, #d4d0f0 100%);
+    color: #1E1A2F;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+h1, h2, h3, .nav-links a, .btn, .logo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #392A48;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #524F81;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #524F81;
+    padding-left: 1rem;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+/* Form Card */
+.form-card {
+    background: #FFFFFF;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #392A48;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.required-label::after {
+    content: " *";
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Select and Input Styles */
+select, input[type="text"], input[type="date"], textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e0daf5;
+    border-radius: 0.8rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #F9F9FF;
+}
+
+select:focus, input:focus, textarea:focus {
+    outline: none;
+    border-color: #524F81;
+    box-shadow: 0 0 0 3px rgba(82, 79, 129, 0.1);
+}
+
+/* Radio Group (Star Rating) */
+.rating-simple {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.rating-simple label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: normal;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.rating-simple input {
+    width: auto;
+    margin-right: 0.2rem;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-option input {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    accent-color: #524F81;
+}
+
+.checkbox-option span {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #524F81;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit-btn:hover {
+    background: #3f3c6a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(82, 79, 129, 0.3);
+}
+
+/* Footer */
+footer {
+    background: #392A48;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Review Page Styles */
+.review-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.review-card .success-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.review-card h2 {
+    border-left: none;
+    text-align: center;
+    padding-left: 0;
+}
+
+.review-stats {
+    background: #E6E6FA;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.review-stats .counter {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #524F81;
+}
+
+.btn-back {
+    display: inline-block;
+    background: #524F81;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-back:hover {
+    background: #3f3c6a;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem auto;
+        padding: 0 1rem;
+    }
+    
+    .form-card {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .rating-simple {
+        gap: 0.8rem;
+    }
+    
+    .checkbox-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Accessibility - Focus visible */
+:focus-visible {
+    outline: 3px solid #524F81;
+    outline-offset: 2px;
+}

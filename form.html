@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luciana Oliveira">
+    <meta name="description" content="Product review form - Share your feedback on our featured products">
+    <title>The Right City | Product Review Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <main class="container">
+        <div class="form-card">
+            <h1>📝 Product Review</h1>
+            <h2>Share your experience with our products</h2>
+            
+            <form id="reviewForm" method="get" action="review.html">
+                <!-- Product Name - Select element -->
+                <div class="form-group">
+                    <label for="productName" class="required-label">Product Name</label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+                </div>
+                
+                <!-- Overall Rating - Radio buttons (1-5 stars) -->
+                <div class="form-group">
+                    <label class="required-label">Overall Rating</label>
+                    <div class="rating-simple">
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="1" required> ⭐ 1
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="2"> ⭐⭐ 2
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="3"> ⭐⭐⭐ 3
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="4"> ⭐⭐⭐⭐ 4
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="5"> ⭐⭐⭐⭐⭐ 5
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Date of Installation -->
+                <div class="form-group">
+                    <label for="installDate" class="required-label">Date of Installation</label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </div>
+                
+                <!-- Useful Features - Checkboxes -->
+                <div class="form-group">
+                    <label>Useful Features (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="featurePerformance" name="features" value="performance">
+                            <span>Performance</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="featureReliability" name="features" value="reliability">
+                            <span>Reliability</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="featureEaseOfUse" name="features" value="easeOfUse">
+                            <span>Ease of Use</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="featureValue" name="features" value="value">
+                            <span>Value for Money</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="featureSupport" name="features" value="support">
+                            <span>Customer Support</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Written Review - Textarea -->
+                <div class="form-group">
+                    <label for="writtenReview">Written Review (Optional)</label>
+                    <textarea id="writtenReview" name="writtenReview" placeholder="Tell us more about your experience with this product..."></textarea>
+                </div>
+                
+                <!-- User Name - Text input -->
+                <div class="form-group">
+                    <label for="userName">Your Name (Optional)</label>
+                    <input type="text" id="userName" name="userName" placeholder="Enter your name">
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">📮 Submit Review</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Luciana Oliveira | Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+    <script src="scripts/form.js"></script>
+</body>
+</html>
