@@ -17,27 +17,47 @@ body {
     flex-direction: column;
 }
 
+/* Header Styles */
+header {
+    background: #392A48;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
 /* Typography */
 h1, h2, h3, .btn {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
-    font-size: 2rem;
+h2 {
+    font-size: 1.6rem;
     font-weight: 700;
     color: #392A48;
     margin-bottom: 0.5rem;
     text-align: center;
-}
-
-h2 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #524F81;
-    margin-bottom: 1.8rem;
-    text-align: center;
     border-left: none;
     padding-left: 0;
+}
+
+.subtitle {
+    text-align: center;
+    color: #524F81;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
 }
 
 /* Container */
@@ -206,12 +226,6 @@ footer p {
     margin-bottom: 1rem;
 }
 
-.review-card h2 {
-    text-align: center;
-    color: #524F81;
-    font-weight: 500;
-}
-
 .review-stats {
     background: #E6E6FA;
     padding: 1.2rem;
@@ -255,8 +269,12 @@ footer p {
         padding: 1.2rem;
     }
     
-    h1 {
-        font-size: 1.5rem;
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .header-title {
+        font-size: 1.1rem;
     }
     
     .rating-simple {
