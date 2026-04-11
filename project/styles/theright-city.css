@@ -1,0 +1,196 @@
+/* The Right City - Optimized CSS */
+
+/* Base Reset */
+*{margin:0;padding:0;box-sizing:border-box}
+
+
+@font-face{
+    font-family:'Montserrat Fallback';
+    src:local('Arial');
+    size-adjust:105%;
+    ascent-override:85%;
+    descent-override:22%;
+    line-gap-override:0%;
+}
+@font-face{
+    font-family:'Open Sans Fallback';
+    src:local('Arial');
+    size-adjust:100%;
+    ascent-override:90%;
+    descent-override:22%;
+    line-gap-override:0%;
+}
+
+/* Core Styles - Using calibrated fallback fonts first, then Google Fonts loads async */
+body{font-family:'Open Sans','Open Sans Fallback',system-ui,sans-serif;background:#E6E6FA;color:#1E1A2F;line-height:1.5;display:flex;flex-direction:column;min-height:100vh}
+h1,h2,h3,.btn,.logo{font-family:'Montserrat','Montserrat Fallback',system-ui,sans-serif}
+
+/* Typography */
+h1{font-size:2rem;font-weight:800;color:#392A48;text-align:center;margin-bottom:0.5rem}
+h2{font-size:1.4rem;font-weight:700;color:#392A48;margin-bottom:1rem;border-left:5px solid #524F81;padding-left:1rem}
+h3{font-size:1.1rem;font-weight:600;color:#524F81;margin-bottom:0.3rem}
+.highlight-text{color:#524F81}
+
+/* Header */
+header{background:#392A48;padding:1rem 2rem;position:sticky;top:0;z-index:100}
+.nav-container{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.logo{font-size:1.3rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem}
+.logo span{font-size:1.6rem}
+.nav-links{display:flex;gap:2rem;flex-wrap:wrap}
+.nav-links a{color:#fff;text-decoration:none;font-weight:600;padding:0.5rem 0}
+.nav-links a:hover{opacity:0.8}
+.nav-links .active{border-bottom:3px solid #524F81}
+
+/* Main Container */
+.container{max-width:1280px;margin:0 auto;padding:2rem;flex:1;min-height:60vh}
+
+/* Hero */
+.hero{background:#fff;border-radius:1.5rem;padding:2.5rem 2rem;margin:2rem 0;text-align:center;min-height:280px}
+.hero-content{max-width:800px;margin:0 auto}
+.hero h1{font-size:2rem;margin-bottom:1rem}
+.hero p{font-size:1rem;max-width:650px;margin:0 auto 1.5rem;color:#4a4570}
+
+/* Buttons */
+.btn{display:inline-block;padding:0.7rem 1.5rem;border-radius:40px;font-weight:700;text-decoration:none;transition:0.2s;border:none;cursor:pointer}
+.btn-primary{background:#524F81;color:#fff}
+.btn-primary:hover{background:#3f3c6a;transform:translateY(-2px)}
+.btn-outline{background:transparent;border:2px solid #524F81;color:#524F81}
+.btn-outline:hover{background:#524F81;color:#fff;transform:translateY(-2px)}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+
+/* Quality Indicators Grid */
+.cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.5rem 0;min-height:160px}
+.info-card{background:#fff;border-radius:1rem;padding:1rem;text-align:center;min-height:140px}
+.info-card .emoji{font-size:1.6rem}
+.info-card .score{font-size:1.4rem;font-weight:800;color:#524F81;margin:0.3rem 0}
+.info-card p{font-size:0.7rem;color:#666}
+
+/* Explanation Section */
+.explanation-section{background:#fff;border-radius:1rem;padding:0 1.5rem;margin:1rem 0 2rem;border-left:5px solid #524F81;max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;border-left-width:0}
+.explanation-section.show{max-height:600px;padding:1.5rem;border-left-width:5px}
+.explanation-grid{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}
+.explanation-card{flex:1;min-width:150px}
+.explanation-text{font-size:0.8rem;margin-top:0.2rem;color:#555}
+.explanation-footer{margin-top:1rem;padding-top:0.8rem;border-top:1px solid #e0daf5;font-size:0.8rem;color:#666}
+
+/* Ranking Cards */
+.cities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0}
+.city-card{background:#fff;border-radius:1rem;overflow:hidden}
+.city-image{width:100%;height:auto;aspect-ratio:340/425;object-fit:cover;background:#e0daf5;display:block}
+.city-info{padding:1rem}
+.rank-badge{background:#524F81;color:#fff;border-radius:20px;padding:0.2rem 0.8rem;font-size:0.7rem;display:inline-block;margin-bottom:0.5rem}
+.city-name{font-size:1.2rem;font-weight:700;color:#392A48}
+.city-state{color:#524F81;font-size:0.8rem;margin-bottom:0.5rem}
+.city-description{color:#555;font-size:0.8rem;margin-bottom:0.8rem;line-height:1.4}
+.scores{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;padding-top:0.5rem;border-top:1px solid #e0daf5}
+.score-label{font-size:0.6rem;color:#666;text-transform:uppercase}
+.score-value{font-size:0.9rem;font-weight:700;color:#524F81}
+
+/* Preview Cards */
+#topCitiesPreview{min-height:280px}
+.preview-card{background:#fff;border-radius:1rem;margin-bottom:0.8rem;display:flex;align-items:center;overflow:hidden}
+.preview-image{width:70px;height:88px;object-fit:cover;background:#e0daf5;flex-shrink:0;aspect-ratio:70/88}
+.preview-content{padding:0.8rem;flex:1}
+.preview-scores{display:flex;gap:1rem;font-size:0.75rem;margin-top:0.3rem}
+.preview-scores span{color:#524F81;font-weight:600}
+
+/* CTA Box */
+.cta-box{background:#fff;border-radius:1rem;padding:1.5rem;margin:2rem 0;text-align:center;border:2px solid #524F81}
+.cta-button{margin-top:1rem}
+.ranking-subtitle{text-align:center;margin-bottom:1.5rem;color:#555}
+
+/* Form Styles */
+.form-container{max-width:550px;margin:0 auto;background:#fff;border-radius:1.5rem;padding:2rem}
+.form-title{text-align:center;margin-bottom:0.5rem;font-size:1.6rem}
+.form-subtitle{text-align:center;margin-bottom:1.5rem;color:#666}
+
+/* Form Groups */
+.form-group{margin-bottom:1.2rem}
+.form-group label{display:block;font-weight:600;color:#392A48;margin-bottom:0.3rem;font-size:0.85rem}
+.required-label::after{content:" *";color:#e74c3c}
+.form-group input,.form-group select{width:100%;padding:0.7rem;border:2px solid #e0daf5;border-radius:0.5rem;font-family:inherit;font-size:0.9rem}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:#524F81}
+
+/* Fieldset and Legend Styles - Rounded borders restored */
+fieldset {
+    border: 2px solid #e0daf5;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+legend {
+    font-weight: 600;
+    color: #392A48;
+    padding: 0 0.5rem;
+    font-size: 0.85rem;
+    width: auto;
+    margin-left: 0.5rem;
+}
+
+.required-label legend {
+    display: inline-block;
+}
+
+.required-label legend::after {
+    content: " *";
+    color: #e74c3c;
+}
+
+/* Radio Group inside fieldset */
+.radio-group{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.5rem}
+.radio-label{display:flex;align-items:center;gap:0.3rem;font-weight:normal;cursor:pointer}
+.radio-label input{width:auto;cursor:pointer}
+
+/* Submit Button */
+.submit-btn{width:100%;margin-top:0.5rem}
+
+/* Success Alert */
+.success-alert{background:#d4edda;color:#155724;padding:0.8rem;border-radius:0.5rem;margin-bottom:1rem;text-align:center}
+
+/* Form Footer Note */
+.form-footer-note{text-align:center;margin-top:1.5rem;font-size:0.8rem;color:#666}
+
+/* Footer */
+footer{background:#392A48;color:#fff;text-align:center;padding:1rem;margin-top:2rem}
+footer p{font-size:0.75rem}
+
+/* Footer Links */
+footer a {
+    color: #E6E6FA;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media(max-width:900px){.cities-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+    .container{padding:1rem}
+    h1{font-size:1.5rem}
+    h2{font-size:1.2rem}
+    .nav-container{flex-direction:column;text-align:center}
+    .nav-links{justify-content:center}
+    .hero{padding:1.5rem;min-height:auto}
+    .hero h1{font-size:1.5rem}
+    .cards-grid{grid-template-columns:repeat(2,1fr);gap:0.8rem}
+    .preview-card{flex-direction:column;text-align:center}
+    .preview-image{width:100%;height:auto;max-height:120px}
+    .preview-scores{justify-content:center}
+}
+@media(max-width:700px){.cities-grid{grid-template-columns:1fr}}
+@media(max-width:480px){
+    .cards-grid{grid-template-columns:repeat(2,1fr)}
+    .info-card{padding:0.8rem;min-height:120px}
+    .info-card .score{font-size:1.2rem}
+    .hero-buttons{flex-direction:column;align-items:center}
+    .hero-buttons .btn{width:100%;max-width:250px;text-align:center}
+    .radio-group{flex-direction:column;gap:0.5rem}
+    .form-container{padding:1.2rem}
+}
+
+/* Accessibility */
+:focus-visible{outline:3px solid #524F81;outline-offset:2px}

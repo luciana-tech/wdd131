@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luciana Oliveira">
+    <meta name="description" content="Discover Brazilian cities with the best quality of life and cost-benefit ratio. Data-driven rankings based on health, education, safety, and real estate prices.">
+    <meta name="keywords" content="Brazil cities, quality of life, cost benefit, real estate Brazil">
+    <!-- bfcache optimization -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>The Right City | Find Your Perfect Brazilian City</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Load CSS first -->
+    <link rel="stylesheet" href="styles/theright-city.css">
+    
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <script src="scripts/theright-city.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="The Right City Home">
+                <span aria-hidden="true">🏙️</span> The Right City
+            </a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="ranking.html">Ranking</a>
+                <a href="signup.html">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id="main-content">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Discover where <span class="highlight-text">quality living</span> still fits your budget</h1>
+                <p>We cross-reference official data on health, education, and safety with real real estate market prices to reveal Brazilian cities with the best quality-cost ratio.</p>
+                <div class="hero-buttons">
+                    <a href="ranking.html" class="btn btn-primary">📊 Explore the Ranking</a>
+                    <a href="#" class="btn btn-outline" id="howItWorksBtn" aria-label="Learn how we calculate rankings" aria-expanded="false" aria-controls="explanationSection">📈 How We Calculate It</a>
+                </div>
+            </div>
+        </div>
+
+        <h2>📊 Quality of Life Indicators</h2>
+        <div class="cards-grid" id="indicatorsContainer" aria-label="Quality indicators cards"></div>
+
+        <div id="explanationSection" class="explanation-section" aria-label="Explanation of calculation methodology">
+            <h2>📊 How We Calculate It</h2>
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h3>📚 Education</h3>
+                    <p class="explanation-text">IDEB scores, literacy rate</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>🏥 Healthcare</h3>
+                    <p class="explanation-text">Hospital beds per capita</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>🚔 Safety</h3>
+                    <p class="explanation-text">Homicide rate, policing</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>🏗️ Infrastructure</h3>
+                    <p class="explanation-text">Sanitation, mobility</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>💰 Cost-Benefit</h3>
+                    <p class="explanation-text">Rent prices, property values</p>
+                </div>
+            </div>
+            <p class="explanation-footer"><strong>Data sources:</strong> IBGE, INEP, Ministry of Health</p>
+        </div>
+
+        <h2>🏆 Top Brazilian Cities</h2>
+        <div id="topCitiesPreview" aria-label="Preview of top ranked cities"></div>
+
+        <div class="cta-box">
+            <h2>📬 Get the best cities delivered to your inbox</h2>
+            <p>Sign up for personalized recommendations.</p>
+            <a href="signup.html" class="btn btn-primary cta-button" aria-label="Create free account">Create Free Account →</a>
+        </div>
+    </main>
+
+    <<footer>
+        <p>&copy; <span id="currentyear"></span> Luciana Oliveira | Brazil</p>
+        <p><a href="attribution.html">Image Attributions &amp; Data Sources</a></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
